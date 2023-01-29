@@ -21,7 +21,7 @@ form {
     text-align: center;
     margin: auto;
 }
-.loginInput input[type="text"] {
+.login input[type="text"] {
     text-align: center;
     width: 500px;
     color: black;
