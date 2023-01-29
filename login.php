@@ -12,7 +12,7 @@
 <body>
     <h1>Log In System</h1><br>
     <h2>Welcome to our file management system!</h2><br>
-    <form class=loginInput action="login.php" method="POST">
+    <form class="loginInput" action="login.php" method="POST">
         User ID: <input type="text" name="username" placeholder="Please input your username" required><br><br>
         <input type="submit" name="submit" value="Login">
     </form>
@@ -39,7 +39,7 @@
                 $_SESSION['user'] = $username;
                 $_SESSION['login'] = true;
                 echo "Congratulations! Log in Sucessfully!";
-                header("Location: home.php");
+                header("Location: homepage.php");
                 exit;
             }
             if($lable == false && var_dump($username === null)){

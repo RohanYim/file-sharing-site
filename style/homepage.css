@@ -2,6 +2,6 @@ body {
     background-image: url('../static/background.jpg');
     background-repeat: repeat;
     background-position: top;
-    margin-right: 200px;
+    margin-right: 500px;
     background-attachment: fixed;
 }

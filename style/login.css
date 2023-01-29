@@ -23,5 +23,6 @@ form {
 }
 .loginInput input[type="text"] {
     text-align: center;
-    color: rgb(7, 53, 153);
+    width: 500px;
+    color: black;
 }
