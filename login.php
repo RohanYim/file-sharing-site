@@ -40,7 +40,7 @@
                 $_SESSION['user'] = $username;
                 $_SESSION['login'] = true;
                 echo "Login Sucessfully!";
-                header("Location: home.php?username=".$username);
+                header("Location: homepage.php?username=".$username);
                 exit;
             }
             if($lable == false && var_dump($username === null)){
