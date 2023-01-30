@@ -10,10 +10,10 @@
 </head>
 
 <body>
-    <h1>Log In System</h1><br>
-    <h2>Welcome to our file management system!</h2><br>
-    <form class="login" action="login.php" method="POST">
-        User ID: <input type="text" name="username" placeholder="Please input your username" required><br><br>
+    <h1>Login System</h1><br><br>
+    <form class=loginInput action="login.php" method="POST">
+        <p>User ID:</p>
+        <input type="text" name="username" placeholder="Please input your username" required><br><br>
         <input type="submit" name="submit" value="Login">
     </form>
     
@@ -22,11 +22,12 @@
         if (isset($_POST['username'])) {
             $username = $_POST['username'];
             $label = false;
-            $userslist = fopen("/home/Fiona/users.txt", "r") or exit("Unable to open file!");
+            $userslist = fopen("/home/RohanSong/hide/users.txt", "r") or exit("Unable to open file!");
             // or use json_encode :>
             while(!feof($userslist)){
-                $getname = fgets($userslist);
-                if($username == $getname){
+                $getname = trim(fgets($userslist));
+                // echo $getname;
+                if(strcmp($username,$getname)==0){
                     $label = true;
                     break;
                 }
@@ -38,14 +39,14 @@
                 session_start();
                 $_SESSION['user'] = $username;
                 $_SESSION['login'] = true;
-                echo "Congratulations! Log in Sucessfully!";
-                header("Location: homepage.php");
+                echo "Login Sucessfully!";
+                header("Location: home.php?username=".$username);
                 exit;
             }
             if($lable == false && var_dump($username === null)){
                 echo "Error: User does not exist. Please check your username and try again!";
             }
-        }
+        } 
     ?>
 </body>
 
