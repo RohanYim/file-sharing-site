@@ -1,20 +1,16 @@
-<?php
- $username = '';
- if (isset($_POST['username'])) {
-     $username = $_POST['username'];
- }            
- // $path = '/home/Fiona/hide/' .$username;
- $path = '/home/Fiona/hide/Fiona';
+<?php   
+ session_start();
+ $username = $_SESSION['user'];    
+ 
+ $path = '/home/RohanSong/hide/' .$username;
  
 if (isset($_POST['file'])) {
-    echo $path;
-    echo $file;
     $file = $_POST['file'];
     if (is_file($path . '/' . $file)) {
         unlink($path . '/' . $file);
-        echo 'Document' . $file . ' have already been deleted';
+        echo 'Document ' . $file . ' have already been deleted';
     } else {
-        echo 'Document' . $file . ' did not exist';
+        echo 'Document ' . $file . ' did not exist';
     }
 }
 ?>

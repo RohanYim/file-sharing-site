@@ -21,7 +21,7 @@
         if (isset($_POST['username'])) {
             $username = $_POST['username'];
             $label = false;
-            $userslist = fopen("/home/Fiona/hide/users.txt", "r") or die("Unable to open file!");
+            $userslist = fopen("/home/RohanSong/hide/users.txt", "r") or die("Unable to open file!");
             // or use json_encode :>
             while(!feof($userslist)){
                 $getname = trim(fgets($userslist));
