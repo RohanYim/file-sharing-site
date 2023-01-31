@@ -11,13 +11,14 @@
     <h1>Welcome to Your Homepage!~</h1>
     <div class="view">
         <?php
+            session_start();
             // get username, can not work
-            $username = '';
-            if (isset($_POST['username'])) {
-                $username = $_POST['username'];
-            }            
-            // $path = '/home/Fiona/hide/' .$username;
-            $path = '/home/Fiona/hide/Fiona';
+            $username = $_SESSION['user'];
+            // if (isset($_POST['username'])) {
+            //     $username = $_POST['username'];
+            // }            
+            $path = '/home/Fiona/hide/' .$username;
+            // $path = '/home/Fiona/hide/Fiona';
             $files = scandir($path);
             foreach ($files as $file){
                 if (is_file($path . '/' . $file)){
