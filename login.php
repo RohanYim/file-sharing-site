@@ -12,17 +12,16 @@
 <body>
     <h1>Login System</h1><br><br>
     <form class=loginInput action="login.php" method="POST">
-        <p>User ID:</p>
-        <input type="text" name="username" placeholder="Please input your username" required><br><br>
+        User ID: <input type="text" name="username" placeholder="Please input your username" required>
         <input type="submit" name="submit" value="Login">
     </form>
     
-    <?php
+        <?php
         // Check User List
         if (isset($_POST['username'])) {
             $username = $_POST['username'];
             $label = false;
-            $userslist = fopen("/home/RohanSong/hide/users.txt", "r") or exit("Unable to open file!");
+            $userslist = fopen("/home/Fiona/hide/users.txt", "r") or die("Unable to open file!");
             // or use json_encode :>
             while(!feof($userslist)){
                 $getname = trim(fgets($userslist));
@@ -41,9 +40,8 @@
                 $_SESSION['login'] = true;
                 echo "Login Sucessfully!";
                 header("Location: homepage.php?username=".$username);
-                exit;
             }
-            if($lable == false && var_dump($username === null)){
+            if($label == false && empty($username)){
                 echo "Error: User does not exist. Please check your username and try again!";
             }
         } 
