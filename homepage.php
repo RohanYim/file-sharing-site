@@ -16,9 +16,12 @@
             $username = $_SESSION['user'];
             // if (isset($_POST['username'])) {
             //     $username = $_POST['username'];
-            // }            
+            // }
             $path = '/home/RohanSong/hide/' .$username;
             // $path = '/home/Fiona/hide/Fiona';
+            if (!is_dir($path)) {
+                mkdir($path, 0775, true);
+            }
             $files = scandir($path);
             // echo "Your files";
             echo '<table width="580"border="1"cellpadding="1"cellspacing="1"bordercolor="#fff"bgcolor="#c117e50">
