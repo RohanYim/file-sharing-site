@@ -21,7 +21,7 @@
                 echo "<a href='login.php'>Click to jump to login page!</a>";
                 exit;
             }
-            
+
             $userpath = "/home/RohanSong/hide/";
             $path = $userpath . $username;
             // make user's dir if it doesn't not exist
@@ -40,12 +40,14 @@
                 <td class="td">Type</td>
                 <td class="td">Action</td>
             </tr>';
+            $folder_size = 0;
             foreach ($files as $key=>$value){
                 // check if it is a file
                 if (is_file($path . '/' . $value)){
                     $bytes = filesize($path . '/' . $value);
                     $size = round($bytes/1024,2);
                     $type = pathinfo($path . '/' . $value, PATHINFO_EXTENSION);
+                    $folder_size += $size;
                     echo '<tr class="td">
                     <td class="td"><a href="view.php?file=' . $value . '">' . $value . '</a></td>
                     <td class="td">'.$size.'kbs</td>
@@ -54,6 +56,8 @@
                     </tr>';
                 }
             }
+            // check folder size
+            echo round($folder_size/1024,2)."Mb/20Mb";
             // zip all files in the folder by clicking "zip all"
             echo '<form action="zip.php" method="post">
                     <input type="submit" name="button" class="btn" value="Zip all" />
@@ -62,15 +66,16 @@
             echo '<form action="logout.php" method="post">
                 <input type="submit" name="button" class="logoutbtn" value="Log out" />
             </form>';
-        ?>
 
-        <form action="upload.php" method="post" enctype="multipart/form-data">
-            <p>Who's file you are uploading?</p>
-            <input type="text" name='username' class="usrname" placeholder="Please input your username" required><br><br>
-            <label for="file">Click to select files: </label>
-            <input type="file" name="file" id="file"><br>
-            <input type="submit" name="submit" value="Upload">
-        </form>
+            echo '<form action="upload.php" method="post" enctype="multipart/form-data">
+                    <p>Choose the user you are uploading to?</p>
+                    <input type="text" name="username" class="usrname" placeholder="Please input your username" required><br><br>
+                    <label for="file">Click to select files: </label>
+                    <input type="hidden" value='.$folder_size.' name="size">
+                    <input type="file" name="file" id="file"><br>
+                    <input type="submit" name="submit" value="Upload">
+                </form>';
+        ?>
     </div>
 
 </body>
