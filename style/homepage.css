@@ -11,3 +11,38 @@ h1 {
     font-weight: bold;
     color: rgb(76, 10, 134);
 }
+
+.tb {
+    width: 580;
+    border: 1;
+    padding: 1;
+    border-color: #fff;
+    background-color: #fff;
+    margin-bottom: 20px;
+}
+
+.td {
+    width: 200px;
+    /* align-items: center; */
+    /* align-self: center; */
+    border-color: #fff;
+    background-color: #fff;
+}
+
+.btn {
+    position: relative;
+    top: 145px;
+    left: 715px;
+    font-size: 20px;
+}
+
+.usrname {
+    width: 200px;
+}
+
+.logoutbtn {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    font-size: 20px;
+}

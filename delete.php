@@ -1,9 +1,10 @@
-<?php   
+<?php 
+// get username from session  
  session_start();
  $username = $_SESSION['user'];    
  
  $path = '/home/RohanSong/hide/' .$username;
- 
+ // if file exists, delete it
 if (isset($_POST['file'])) {
     $file = $_POST['file'];
     if (is_file($path . '/' . $file)) {
