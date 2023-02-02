@@ -34,13 +34,13 @@ We support the user name as follows: Rohan, Fiona, Test, Song.
 - [x] Site is visually appealing (1 point)
 
 ### Creative Portion
-- [x] Support transferring files to other users
+- [x] Support transferring files to other users</br>
 When inputting the username, then we can not only support uploading to the local file but also support uploading to the specified user.
-- [x] Display other information about the file
+- [x] Display other information about the file</br>
 When you get to your homepage, you can see the file list there. Also, you will see the size and type of the file. 
-- [x] Verify the filenames whether conform to the naming standards
+- [x] Verify the filenames whether conform to the naming standards</br>
 We will verify the filenames in order to make sure it follows the naming standards. For example, once you upload the file named "Lecture 1", this will not be allowed in our file management system.
-- [x] Zip the file
+- [x] Zip the file</br>
 We support the user to zip the file in our file system.
-- [x] Folder space monitor and upload file size limit check
+- [x] Folder space monitor and upload file size limit check</br>
 We set a folder limit to 20Mb per user, if the uploaded file exceed 20Mb, we will deny the upload request. In addition, PHP will restrict us to a maximum 2 MB upload file size.
