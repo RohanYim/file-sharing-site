@@ -10,7 +10,7 @@ Github username: RohanYim
 
 # Link
 http://18.191.24.174/~RohanSong/module2/login.php
-We support the user name as follows: Rohan, Fiona.
+We support the user name as follows: Rohan, Fiona, Test, Song.
 ![Image text](http://ec2-3-82-231-44.compute-1.amazonaws.com/~Fiona/module2-group-module2-510576-505908/static/Login.png)
 
 # Requirements
@@ -42,3 +42,5 @@ When you get to your homepage, you can see the file list there. Also, you will s
 We will verify the filenames in order to make sure it follows the naming standards. For example, once you upload the file named "Lecture 1", this will not be allowed in our file management system.
 - [x] Zip the file
 We support the user to zip the file in our file system.
+- [x] Folder space monitor and upload file size limit check
+We set a folder limit to 20Mb per user, if the uploaded file exceed 20Mb, we will deny the upload request. In addition, PHP will restrict us to a maximum 2 MB upload file size.
