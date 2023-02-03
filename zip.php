@@ -2,7 +2,8 @@
 session_start();
 $username = $_SESSION['user'];
 
-$userpath = "/home/RohanSong/hide/";
+// $userpath = "/home/RohanSong/hide/";
+$userpath = "/home/Fiona/hide/";
 $path = $userpath . $username;
 
 // Get real path for our folder

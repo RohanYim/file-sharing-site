@@ -21,7 +21,8 @@
         if (isset($_POST['username'])) {
             $username = $_POST['username'];
             $label = false;
-            $userslist = fopen("/home/RohanSong/hide/users.txt", "r") or die("Unable to open file!");
+            $userslist = fopen("/home/Fiona/hide/users.txt", "r") or die("Unable to open file!");
+            // $userslist = fopen("/home/RohanSong/hide/users.txt", "r") or die("Unable to open file!");
             while(!feof($userslist)){
                 // remove spaces
                 $getname = trim(fgets($userslist));
