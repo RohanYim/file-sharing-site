@@ -21,8 +21,8 @@
             exit;
         }
 
-        $userpath = "/home/Fiona/hide/";
-        // $userpath = "/home/RohanSong/hide/";
+        // $userpath = "/home/Fiona/hide/";
+        $userpath = "/home/RohanSong/hide/";
         $path = $userpath . $username;
         // make user's dir if it doesn't not exist
         if (!file_exists($path)) {

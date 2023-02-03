@@ -3,8 +3,8 @@
 session_start();
 $username = $_SESSION['user'];    
  
-$path = '/home/Fiona/hide/' .$username;
-//  $path = '/home/RohanSong/hide/' .$username;
+// $path = '/home/Fiona/hide/' .$username;
+ $path = '/home/RohanSong/hide/' .$username;
 // if file exists, delete it
 if (isset($_POST['file'])) {
     $file = $_POST['file'];

@@ -13,19 +13,16 @@ h1 {
 }
 
 .tb {
-    width: 580;
-    border: 1;
-    padding: 1;
-    border-color: #fff;
+    width: 1000px;
+    border: 1px;
+    padding: 1px;
     background-color: #fff;
+    border-color: black;
     margin-bottom: 20px;
 }
 
 .td {
     width: 200px;
-    /* align-items: center; */
-    /* align-self: center; */
-    border-color: #fff;
     background-color: #fff;
 }
 

@@ -6,8 +6,8 @@ if ($_FILES["file"]["error"] > 0){
     echo "Error: " . $_FILES["file"]["error"] . "<br>";
     echo "Note: PHP will restrict you to a maximum 2 MB upload file size.";
 }else{
-    // $path = '/home/RohanSong/hide/' .$username;
-    $path = '/home/Fiona/hide/' .$username;
+    $path = '/home/RohanSong/hide/' .$username;
+    // $path = '/home/Fiona/hide/' .$username;
     if(!file_exists($path)){
         echo '<script>alert("User not found, back and try again!")</script>';
     }else{
@@ -21,8 +21,8 @@ if ($_FILES["file"]["error"] > 0){
             exit;
         }
         // check if this file already exist
-        // if (file_exists("/home/RohanSong/hide/$username/" . $_FILES["file"]["name"])){
-        if (file_exists("/home/Fiona/hide/$username/" . $_FILES["file"]["name"])){
+        if (file_exists("/home/RohanSong/hide/$username/" . $_FILES["file"]["name"])){
+        // if (file_exists("/home/Fiona/hide/$username/" . $_FILES["file"]["name"])){
             echo $_FILES["file"]["name"] . " has already existed. ";
         }else{
             // filename check
@@ -31,8 +31,8 @@ if ($_FILES["file"]["error"] > 0){
                 exit;
             }
             // replace filr from temp folder to user's folder
-            // if(move_uploaded_file($_FILES["file"]["tmp_name"], "/home/RohanSong/hide/$username/" . $_FILES["file"]["name"])){
-            if(move_uploaded_file($_FILES["file"]["tmp_name"], "/home/Fiona/hide/$username/" . $_FILES["file"]["name"])){
+            if(move_uploaded_file($_FILES["file"]["tmp_name"], "/home/RohanSong/hide/$username/" . $_FILES["file"]["name"])){
+            // if(move_uploaded_file($_FILES["file"]["tmp_name"], "/home/Fiona/hide/$username/" . $_FILES["file"]["name"])){
                 echo "Successfully saved!";
             }else{
                 echo "Upload failed!";
