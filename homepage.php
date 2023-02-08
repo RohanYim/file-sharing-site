@@ -56,9 +56,9 @@
                 </tr>';
             }
         }
-        // echo '</table>';
+        echo '</table>';
         // check folder size
-        echo round($folder_size/1024,2)."Mb/20Mb";
+        echo "<div>".round($folder_size/1024,2)."Mb/20Mb</div>";
         // zip all files in the folder by clicking "zip all"
         echo '<form action="zip.php" method="post">
                 <input type="submit" name="button" class="btn" value="Zip all" />
