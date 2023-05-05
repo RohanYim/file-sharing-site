@@ -1,21 +1,4 @@
 # CSE330
-Name: Fiona Xu
-Student id: 510576
-Github username: Fionawin
-
-Name: Rohan Song
-Student id: 505908
-Github username: RohanYim
-
-
-# Link
-### RohanSong
-http://18.191.24.174/~RohanSong/module2/login.php
-### FionaXu
-http://ec2-3-82-231-44.compute-1.amazonaws.com/~Fiona/module2-group-module2-510576-505908/login.php
-
-##### We support the user name as follows: Rohan, Fiona, Test, Song.
-![Image text](http://ec2-3-82-231-44.compute-1.amazonaws.com/~Fiona/module2-group-module2-510576-505908/static/Login.png)
 
 # Requirements
 ### File Sharing Site
